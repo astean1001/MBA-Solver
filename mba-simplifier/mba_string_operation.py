@@ -267,7 +267,7 @@ def expression_2_term(expreStr):
             term = itemList[idx - 1] + itemList[idx]
             constantList.append(term)
         else:
-            print("This is something wrong in mba expression.")
+            print("error in mba-solver!")
             #traceback.print_stack()
             #sys.exit(0)
 

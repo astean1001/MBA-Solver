@@ -4,7 +4,6 @@
 
 import re
 import sys
-sys.path.append("../tools")
 import time
 from mba_string_operation import verify_mba_unsat, variable_list, expression_2_term
 from svector_simplify import SvectorSimplify
@@ -103,6 +102,7 @@ def simplify_npmba(datafile):
                 print("z3 solving: ")
                 z3res = verify_mba_unsat(cmbaSimExpre, groundtruth, 2)
                 print("z3 solved: ", z3res)
+                print(cmbaSimExpre)
                 if z3res:
                     print(linenum, cmbaExpre, groundtruth, cmbaSimExpre, groundtruthSim, z3res)
                     print(cmbaExpre, groundtruth, cmbaSimExpre, groundtruthSim, z3res, elapsed, sep=",",file=fw)
